@@ -48,6 +48,3 @@ function game(){
         i++
     }
 }
-
-
-game()
