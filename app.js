@@ -30,7 +30,7 @@ function getComputerChoice(){
         return choice;        
       
 }
-let playerInput = window.prompt("What do you choose? Rock,Paper,Scissors")
+// let playerInput = window.prompt("What do you choose? Rock,Paper,Scissors")
 const playerSelection = playerInput
 const computerSelection = getComputerChoice();
 
