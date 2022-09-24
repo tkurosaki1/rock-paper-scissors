@@ -1,24 +1,3 @@
-// playRound function 2.0
-
-function playRound(playerSelection, computerSelection) {
-    if (computerSelection === "Rock" && playerSelection === "Paper"){
-    return "You have chosen Paper---You Wonn!!" 
-    }else if (computerSelection === "Rock" && playerSelection === "Scissors"){
-    return "You have chosen Scissors---You Lost!!"
-    }else if (computerSelection === "Rock" && playerSelection === "Rock" || computerSelection === "Scissors" && playerSelection === "Scissors" || computerSelection === "Paper" && playerSelection === "Paper"){
-    return `You have chosen ${playerSelection} --- you Tie!!`
-    }else if(computerSelection === "Paper" && playerSelection === "Rock"){
-    return "You have chosen Rock --- you Lost!!!"
-    }else if(computerSelection === "Paper" && playerSelection === "Scissors"){
-    return "You have chosen Scissors --- You Won"    
-    }else if(computerSelection === "Scissors" && playerSelection === "Paper"){
-    return "You have chosen Paper --- You Lost!!!"
-    }else if(computerSelection === "Scissors" && playerSelection === "Rock"){
-    return "You chose Rock --- You won!!!"
-    
-    }
-    }
-
 // // getComputerChoice function
 
 function getComputerChoice(){
@@ -30,22 +9,50 @@ function getComputerChoice(){
         return choice;        
       
 }
-let playerInput = window.prompt("What do you choose? Rock,Paper,Scissors")
-const playerSelection = playerInput
-const computerSelection = getComputerChoice();
+// let playerInput = window.prompt("What do you choose? Rock,Paper,Scissors")
+let playerInput = ""
+// const playerSelection = playerInput
+// const computerSelection = getComputerChoice();
 
-// console.log(playRound(playerSelection, computerSelection))
-
-
-// game function
-
-var i = 0
-function game(){
-    while(i<5){
-        const playerSelection = playerInput;
-        const computerSelection = getComputerChoice();
-        console.log(playRound(playerSelection,computerSelection));
-        i++
+// Paper Button Code
+const pbtn = document.querySelector("#myBtn");
+pbtn.addEventListener("click",() =>{
+    const computerSelection = getComputerChoice();
+    if(computerSelection === "Rock"){
+        scoreDiv.innerHTML="Yaaaay You won against Paper!! --- Click To Play Again";
+    }if(computerSelection === "Paper"){
+        scoreDiv.innerHTML = "Awww You Tie to Paper!--- Click To Play Again";
+    }if(computerSelection === "Scissors"){
+        scoreDiv.innerHTML= "Awww you lost against Scissors--- Click To Play Again";
     }
-}
+});
 
+// Rock Button Code
+const rbtn = document.querySelector("#myBtn1");
+rbtn.addEventListener("click",() =>{
+    const computerSelection = getComputerChoice();
+    if(computerSelection === "Rock"){
+        scoreDiv.innerHTML="Tie --- Click To Play Again";
+    }if(computerSelection === "Paper"){
+        scoreDiv.innerHTML="Awww You lost to Paper!--- Click To Play Again";
+    }if(computerSelection === "Scissors"){
+        scoreDiv.innerHTML="Yaaay you won against Scissors --- Click To Play Again";
+    }
+});
+
+// Scissors Button Code
+const sbtn = document.querySelector("#myBtn2");
+sbtn.addEventListener("click",() =>{
+    const computerSelection = getComputerChoice();
+    if(computerSelection === "Rock"){
+        scoreDiv.innerHTML="Awwww You lost to Rock--- Click To Play Again";
+    }if(computerSelection === "Paper"){
+        scoreDiv.innerHTML="Yaaaaay You won to Paper!--- Click To Play Again";
+    }if(computerSelection === "Scissors"){
+        scoreDiv.innerHTML ="you Tie against Scissors--- Click To Play Again";
+    }
+});
+
+const scoreDiv = document.querySelector("#scoreBoard");
+
+ 
