@@ -1,4 +1,4 @@
-// // getComputerChoice function
+// / // getComputerChoice function
 
 function getComputerChoice(){
   
@@ -9,17 +9,6 @@ function getComputerChoice(){
         return choice;        
       
 }
-<<<<<<< HEAD
-let playerInput = window.prompt("What do you choose? Rock,Paper,Scissors")
-const playerSelection = playerInput
-const computerSelection = getComputerChoice();
-=======
-// let playerInput = window.prompt("What do you choose? Rock,Paper,Scissors")
-let playerInput = ""
-// const playerSelection = playerInput
-// const computerSelection = getComputerChoice();
->>>>>>> rps-ui
-
 // Paper Button Code
 const pbtn = document.querySelector("#myBtn");
 pbtn.addEventListener("click",() =>{
@@ -60,5 +49,3 @@ sbtn.addEventListener("click",() =>{
 });
 
 const scoreDiv = document.querySelector("#scoreBoard");
-
- 
