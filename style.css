@@ -1,17 +1,31 @@
 body{
-    background-color: bisque;
+    background-color: lightcoral;
 }
 
 
 h1{
 text-align: center;
+height: 100px;
+
+}
+
+h2{
+  text-align: center;
+  height: 100px;
 }
 
 img {
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 5px;
-    width: 150px;
+  float: left;
+  width:  200px;
+  height: 200px;
+  margin-right: 10px;
+  }
+
+
+
+  #scoreBoard{
+    font-size: 30px;
+    color: rgb(238, 238, 252);
   }
 
 .flexcontainer{
@@ -25,8 +39,16 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 20px;
-  gap: 20px;
+  height: 100px;
+  gap: 115px;
+  margin-right: 40px;
   
 }
 
+.flexcontainer3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  gap: 20px;
+}
